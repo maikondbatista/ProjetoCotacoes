@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AutoMapper\v2\**" />
+    <EmbeddedResource Remove="AutoMapper\v2\**" />
+    <None Remove="AutoMapper\v2\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.21" />
+    <PackageReference Include="Serilog.AspNetCore" Version="4.0.0" />
+    <PackageReference Include="Serilog.Extensions.Logging.File" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EmprestaJogo.Dominio\Cotacoes.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
